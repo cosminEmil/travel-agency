@@ -11,4 +11,6 @@ module org.example.newprojectmpp {
 
     opens org.example.newprojectmpp to javafx.fxml;
     exports org.example.newprojectmpp;
+    exports org.example.newprojectmpp.controller;
+    opens org.example.newprojectmpp.controller to javafx.fxml;
 }

@@ -5,6 +5,7 @@ import org.example.newprojectmpp.model.Flight;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 public class FlightRepository extends BaseRepository<Flight> {
     public FlightRepository(Connection connection) {
@@ -55,5 +56,10 @@ public class FlightRepository extends BaseRepository<Flight> {
     @Override
     protected void setId(Flight entity, int id) {
         entity.setId(id);
+    }
+
+    @Override
+    public List<Flight> findAll() {
+        return List.of();
     }
 }

@@ -1,9 +1,12 @@
 package org.example.newprojectmpp.repository;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import org.example.newprojectmpp.model.Employee;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class EmployeeRepository extends BaseRepository<Employee> {
@@ -52,6 +55,28 @@ public class EmployeeRepository extends BaseRepository<Employee> {
     @Override
     protected void setId(Employee entity, int id) {
         entity.setId(id);
+    }
+
+    public ObservableList<Employee> findAll() {
+        ObservableList<Employee> employees = FXCollections.observableArrayList();
+        String sql = "SELECT * FROM employees";
+
+        try (PreparedStatement stmt = connection.prepareStatement(sql);
+             ResultSet rs = stmt.executeQuery()) {
+
+            while (rs.next()) {
+                Employee employee = new Employee();
+                employee.setId(rs.getInt("id"));
+                employee.setName(rs.getString("name"));
+                employee.setEmail(rs.getString("email"));
+                employee.setPassword(rs.getString("password"));
+                employees.add(employee);
+            }
+        } catch (SQLException e) {
+            logger.error("Failed to fetch employees", e);
+            throw new RuntimeException("Database error", e);
+        }
+        return employees;
     }
 
 }

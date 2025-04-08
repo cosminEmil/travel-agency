@@ -1,46 +1,37 @@
 package org.example.newprojectmpp.model;
 
+import javafx.beans.property.*;
+
 public class Employee {
-    private int id;
-    private String name;
-    private String email;
-    private String password;
+    private final IntegerProperty id = new SimpleIntegerProperty();
+    private final StringProperty name = new SimpleStringProperty();
+    private final StringProperty email = new SimpleStringProperty();
+    private final StringProperty password = new SimpleStringProperty();
+
+    public Employee() {}
 
     public Employee(String name, String email, String password) {
-        this.name = name;
-        this.email = email;
-        this.password = password;
+        setName(name);
+        setEmail(email);
+        setPassword(password);
     }
 
-    public String getEmail() {
-        return email;
-    }
+    // Property getters
+    public IntegerProperty idProperty() { return id; }
+    public StringProperty nameProperty() { return name; }
+    public StringProperty emailProperty() { return email; }
+    public StringProperty passwordProperty() { return password; }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    // Regular getters and setters
+    public int getId() { return id.get(); }
+    public void setId(int id) { this.id.set(id); }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name.get(); }
+    public void setName(String name) { this.name.set(name); }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public String getEmail() { return email.get(); }
+    public void setEmail(String email) { this.email.set(email); }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
+    public String getPassword() { return password.get(); }
+    public void setPassword(String password) { this.password.set(password); }
 }

@@ -5,6 +5,7 @@ import org.example.newprojectmpp.model.Ticket;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
 public class TicketRepository extends BaseRepository<Ticket> {
     public TicketRepository(Connection connection) {
@@ -53,5 +54,10 @@ public class TicketRepository extends BaseRepository<Ticket> {
     @Override
     protected void setId(Ticket entity, int id) {
         entity.setId(id);
+    }
+
+    @Override
+    public List<Ticket> findAll() {
+        return List.of();
     }
 }

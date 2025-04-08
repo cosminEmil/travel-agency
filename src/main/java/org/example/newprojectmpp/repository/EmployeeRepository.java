@@ -1,6 +1,6 @@
-package repository;
+package org.example.newprojectmpp.repository;
 
-import model.Employee;
+import org.example.newprojectmpp.model.Employee;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,4 +1,4 @@
-package model;
+package org.example.newprojectmpp.model;
 
 public class Flight {
     private int id;

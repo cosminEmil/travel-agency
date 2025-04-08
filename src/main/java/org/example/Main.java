@@ -1,9 +1,7 @@
 package org.example;
 
-import model.Employee;
-import repository.EmployeeRepository;
-import repository.FlightRepository;
-import repository.TicketRepository;
+import org.example.newprojectmpp.model.Employee;
+import org.example.newprojectmpp.repository.EmployeeRepository;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,7 +1,6 @@
-package repository;
+package org.example.newprojectmpp.repository;
 
-import model.Flight;
-import repository.BaseRepository;
+import org.example.newprojectmpp.model.Flight;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

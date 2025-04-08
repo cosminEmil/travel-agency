@@ -1,7 +1,7 @@
-package service;
+package org.example.newprojectmpp.service;
 
-import model.Employee;
-import repository.IRepository;
+import org.example.newprojectmpp.model.Employee;
+import org.example.newprojectmpp.repository.IRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

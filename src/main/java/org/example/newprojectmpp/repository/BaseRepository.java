@@ -1,4 +1,4 @@
-package repository;
+package org.example.newprojectmpp.repository;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,7 +18,7 @@ public abstract class BaseRepository<T> implements IRepository<T> {
     public BaseRepository(Connection connection, String tableName) {
         this.connection = connection;
         this.tableName = tableName;
-        logger.debug("Initialized repository for table: {}", tableName);
+        logger.debug("Initialized org.example.newprojectmpp.repository for table: {}", tableName);
     }
 
     protected abstract void setAddParameters(PreparedStatement stmt, T entity) throws SQLException;

@@ -1,7 +1,6 @@
-package controller;
+package org.example.newprojectmpp.controller;
 
-import model.Ticket;
-import service.TicketService;
+import org.example.newprojectmpp.service.TicketService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

@@ -1,6 +1,6 @@
-package controller;
+package org.example.newprojectmpp.controller;
 
-import service.EmployeeService;
+import org.example.newprojectmpp.service.EmployeeService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

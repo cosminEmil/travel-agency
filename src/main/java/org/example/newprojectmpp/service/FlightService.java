@@ -1,7 +1,7 @@
-package service;
+package org.example.newprojectmpp.service;
 
-import model.Flight;
-import repository.IRepository;
+import org.example.newprojectmpp.model.Flight;
+import org.example.newprojectmpp.repository.IRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -27,8 +27,8 @@ public class FlightService {
     public List<Flight> findFlightsByDestination(String destination) {
         logger.debug("Searching flights to: {}", destination);
         Flight searchFlight = new Flight(destination, null, null, 0);
-        // This assumes your repository's search method can be adapted for this
-        // Alternatively, implement a specific repository method
+        // This assumes your org.example.newprojectmpp.repository's search method can be adapted for this
+        // Alternatively, implement a specific org.example.newprojectmpp.repository method
         return getAllFlights().stream()
                 .filter(f -> f.getDestination().equalsIgnoreCase(destination))
                 .collect(Collectors.toList());

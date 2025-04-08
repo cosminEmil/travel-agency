@@ -7,7 +7,7 @@
     </Appenders>
     <Loggers>
         <!-- Set specific packages to TRACE for debugging -->
-        <Logger name="repository" level="TRACE" additivity="false">
+        <Logger name="org.example.newprojectmpp.repository" level="TRACE" additivity="false">
             <AppenderRef ref="Console"/>
         </Logger>
 

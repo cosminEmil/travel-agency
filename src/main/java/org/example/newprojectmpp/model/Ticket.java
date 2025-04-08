@@ -1,4 +1,4 @@
-package model;
+package org.example.newprojectmpp.model;
 
 import java.util.List;
 

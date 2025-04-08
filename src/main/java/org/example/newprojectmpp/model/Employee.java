@@ -1,6 +1,4 @@
-package model;
-
-import javafx.beans.property.StringProperty;
+package org.example.newprojectmpp.model;
 
 public class Employee {
     private int id;

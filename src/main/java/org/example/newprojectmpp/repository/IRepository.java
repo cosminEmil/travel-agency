@@ -1,4 +1,4 @@
-package repository;
+package org.example.newprojectmpp.repository;
 
 public interface IRepository<T> {
     void add(T entity);

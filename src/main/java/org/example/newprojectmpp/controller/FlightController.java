@@ -1,7 +1,7 @@
-package controller;
+package org.example.newprojectmpp.controller;
 
-import model.Flight;
-import service.FlightService;
+import org.example.newprojectmpp.model.Flight;
+import org.example.newprojectmpp.service.FlightService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

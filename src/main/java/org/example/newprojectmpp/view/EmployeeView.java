@@ -1,6 +1,6 @@
-package view;
+package org.example.newprojectmpp.view;
 
-import controller.EmployeeController;
+import org.example.newprojectmpp.controller.EmployeeController;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.*;

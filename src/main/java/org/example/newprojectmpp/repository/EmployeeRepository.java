@@ -57,6 +57,7 @@ public class EmployeeRepository extends BaseRepository<Employee> {
         entity.setId(id);
     }
 
+    @Override
     public ObservableList<Employee> findAll() {
         ObservableList<Employee> employees = FXCollections.observableArrayList();
         String sql = "SELECT * FROM employees";

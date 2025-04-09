@@ -16,6 +16,10 @@ public class Ticket {
         this.noSeats = noSeats;
     }
 
+    public Ticket() {
+
+    }
+
     public String getCustomerName() {
         return customerName;
     }

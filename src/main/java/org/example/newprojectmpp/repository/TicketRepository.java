@@ -1,10 +1,10 @@
 package org.example.newprojectmpp.repository;
 
+import javafx.collections.ObservableList;
 import org.example.newprojectmpp.model.Ticket;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.Collection;
 import java.util.List;
 
 public class TicketRepository extends BaseRepository<Ticket> {
@@ -57,7 +57,22 @@ public class TicketRepository extends BaseRepository<Ticket> {
     }
 
     @Override
-    public List<Ticket> findAll() {
-        return List.of();
+    public ObservableList<Ticket> findAll() {
+        String sql = "SELECT * FROM tickets;";
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Ticket ticket = new Ticket();
+                ticket.setId(rs.getInt("id"));
+                ticket.setCustomerName(rs.getString("customer_name"));
+                String []tourists = rs.getString("tourists").split(",");
+                tourists.stream(Collection< Array<String> >);
+                //ticket.setTourists(rs.getString(rs.));
+            }
+        } catch (SQLException e) {
+            logger.error("Failed to fetch tickets");
+            throw new RuntimeException(e);
+        }
     }
 }

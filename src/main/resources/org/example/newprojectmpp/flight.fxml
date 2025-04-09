@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="568.0" prefWidth="811.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.newprojectmpp.controller.FlightController">
+   <children>
+      <Label alignment="CENTER" layoutX="34.0" layoutY="28.0" prefHeight="44.0" prefWidth="273.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Flights Management" textAlignment="JUSTIFY" />
+      <TableView layoutX="48.0" layoutY="100.0" prefHeight="246.0" prefWidth="727.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="ID" />
+          <TableColumn prefWidth="175.80001068115234" text="Destination" />
+            <TableColumn prefWidth="175.800048828125" text="Departure" />
+            <TableColumn prefWidth="169.80007934570312" text="Airport" />
+            <TableColumn minWidth="3.39996337890625" prefWidth="128.79997558593755" text="NoAvailableSeats" />
+        </columns>
+      </TableView>
+      <GridPane hgap="10.0" layoutX="48.0" layoutY="364.0" prefHeight="99.0" prefWidth="400.0" vgap="15.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="117.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="319.99999237060547" minWidth="10.0" prefWidth="283.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="18.0" prefWidth="107.0" text="Destination:" />
+            <TextField prefHeight="26.0" prefWidth="249.0" GridPane.columnIndex="1" />
+            <Label prefHeight="18.0" prefWidth="72.0" text="Departure:" GridPane.rowIndex="1" />
+            <Label prefHeight="18.0" prefWidth="62.0" text="Airport:" GridPane.rowIndex="2" />
+            <Label prefHeight="18.0" prefWidth="106.0" text="NoAvailableSeats:" GridPane.rowIndex="3" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <HBox layoutX="48.0" layoutY="488.0" prefHeight="26.0" prefWidth="128.0" spacing="10.0">
+         <children>
+            <Button fx:id="addFlight" mnemonicParsing="false" onAction="#handleAddFlight" text="Add" />
+            <Button fx:id="deleteFlight" mnemonicParsing="false" onAction="#handleDeleteFlight" text="Delete" />
+         </children>
+      </HBox>
+      <Label fx:id="statusLabel" layoutX="48.0" layoutY="522.0" prefHeight="26.0" prefWidth="25.0" />
+   </children>
+</AnchorPane>

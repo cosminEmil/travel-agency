@@ -14,6 +14,10 @@ public class Flight {
         this.noAvailableSeats = noAvailableSeats;
     }
 
+    public Flight() {
+
+    }
+
     public String getDestination() {
         return destination;
     }
@@ -53,4 +57,5 @@ public class Flight {
     public int getId() {
         return id;
     }
+
 }
